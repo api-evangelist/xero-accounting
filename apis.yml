@@ -1,0 +1,75 @@
+aid: xero-accounting
+name: Xero Accounting
+description: >-
+  Xero is a cloud accounting platform for small businesses, accountants, and
+  bookkeepers that provides invoicing, bank reconciliation, payroll, expense
+  management, and financial reporting. The Xero Accounting API exposes
+  full-featured REST endpoints for invoices, contacts, bank transactions,
+  accounts, items, journals, reports, and more. All Xero APIs share a single
+  OAuth 2.0 authorization layer, require the Xero-Tenant-Id header to scope
+  requests to an organization, and are served from api.xero.com.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Accounting
+  - Small Business
+  - Invoicing
+  - Bookkeeping
+  - Financial Reporting
+  - SaaS
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/xero-accounting/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: xero-accounting:api
+    name: Xero Accounting API
+    description: >-
+      REST API for managing invoices, contacts, bank transactions, accounts,
+      items, journals, reports, and other accounting resources in a Xero
+      organization. Uses OAuth 2.0 with the Xero-Tenant-Id header to scope
+      requests to a tenant.
+    humanURL: https://developer.xero.com/documentation/api/accounting/overview
+    baseURL: https://api.xero.com/api.xro/2.0
+    tags:
+      - Accounting
+      - Invoicing
+      - Bookkeeping
+    properties:
+      - type: Documentation
+        url: https://developer.xero.com/documentation/api/accounting/overview
+      - type: OAuth 2.0 Guide
+        url: https://developer.xero.com/documentation/guides/oauth2/overview
+      - type: OpenAPI
+        url: https://github.com/XeroAPI/Xero-OpenAPI
+  - aid: xero-accounting:connections
+    name: Xero Connections API
+    description: >-
+      OAuth 2.0 connections endpoint for listing the Xero tenants authorized
+      under an access token.
+    humanURL: https://developer.xero.com/documentation/guides/oauth2/auth-flow
+    baseURL: https://api.xero.com/connections
+    tags:
+      - OAuth
+      - Tenants
+    properties:
+      - type: Documentation
+        url: https://developer.xero.com/documentation/guides/oauth2/auth-flow
+
+common:
+  - type: Website
+    url: https://www.xero.com
+  - type: Documentation
+    url: https://developer.xero.com/documentation
+  - type: Pricing
+    url: https://www.xero.com/pricing
+  - type: Sign Up
+    url: https://developer.xero.com/app/manage
+  - type: GitHub Organization
+    url: https://github.com/XeroAPI
+  - type: OpenAPI Specifications
+    url: https://github.com/XeroAPI/Xero-OpenAPI
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
