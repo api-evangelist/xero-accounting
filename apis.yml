@@ -64,9 +64,9 @@ common:
     url: https://developer.xero.com/documentation
   - type: Pricing
     url: https://www.xero.com/pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://developer.xero.com/app/manage
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/XeroAPI
   - type: OpenAPI Specifications
     url: https://github.com/XeroAPI/Xero-OpenAPI
