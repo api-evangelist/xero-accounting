@@ -20,7 +20,7 @@ tags:
 url: >-
   https://raw.githubusercontent.com/api-evangelist/xero-accounting/refs/heads/main/apis.yml
 created: '2026-05-11'
-modified: '2026-05-11'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
   - aid: xero-accounting:api
@@ -70,6 +70,9 @@ common:
     url: https://github.com/XeroAPI
   - type: OpenAPI Specifications
     url: https://github.com/XeroAPI/Xero-OpenAPI
+  - name: MCP Server
+    url: https://github.com/XeroAPI/xero-mcp-server
+    type: MCPServer
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
