@@ -58,6 +58,8 @@ apis:
         url: https://developer.xero.com/documentation/guides/oauth2/auth-flow
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/xero
   - type: Website
     url: https://www.xero.com
   - type: Documentation
