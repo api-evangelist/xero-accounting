@@ -1,0 +1,394 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Xero Accounting API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://login.xero.com/identity/connect/authorize",
+      "accessTokenUrl": "https://identity.xero.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Accounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve the chart of accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/Accounts",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Retrieve the chart of accounts"
+        },
+        {
+          "info": {
+            "name": "Create a new chart of accounts entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.xero.com/api.xro/2.0/Accounts",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create a new chart of accounts entry"
+        },
+        {
+          "info": {
+            "name": "Retrieve a single chart of accounts entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/Accounts/:AccountID",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "AccountID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a single chart of accounts entry"
+        },
+        {
+          "info": {
+            "name": "Update a chart of accounts entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.xero.com/api.xro/2.0/Accounts/:AccountID",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "AccountID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a chart of accounts entry"
+        },
+        {
+          "info": {
+            "name": "Delete a chart of accounts entry",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.xero.com/api.xro/2.0/Accounts/:AccountID",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "AccountID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a chart of accounts entry"
+        },
+        {
+          "info": {
+            "name": "Retrieve attachments for an account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/Accounts/:AccountID/Attachments",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "AccountID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve attachments for an account"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "BankTransactions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve any spent or received money transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/BankTransactions",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Retrieve any spent or received money transactions"
+        },
+        {
+          "info": {
+            "name": "Create one or more spent or received money transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.xero.com/api.xro/2.0/BankTransactions",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create one or more spent or received money transactions"
+        },
+        {
+          "info": {
+            "name": "Retrieve a single spent or received money transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/BankTransactions/:BankTransactionID",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "BankTransactionID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a single spent or received money transaction"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "BankTransfers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve all bank transfers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/BankTransfers",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Retrieve all bank transfers"
+        },
+        {
+          "info": {
+            "name": "Create a bank transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.xero.com/api.xro/2.0/BankTransfers",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create a bank transfer"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "BatchPayments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve either one or many batch payments for invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/BatchPayments",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Retrieve either one or many batch payments for invoices"
+        },
+        {
+          "info": {
+            "name": "Create a batch payment for invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.xero.com/api.xro/2.0/BatchPayments",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create a batch payment for invoices"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Contacts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve all contacts in a Xero organisation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/Contacts",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Retrieve all contacts in a Xero organisation"
+        },
+        {
+          "info": {
+            "name": "Create multiple contacts (bulk)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.xero.com/api.xro/2.0/Contacts",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create multiple contacts (bulk)"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Invoices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve sales invoices or purchase bills",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/Invoices",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Retrieve sales invoices or purchase bills"
+        },
+        {
+          "info": {
+            "name": "Create one or more sales invoices or purchase bills",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.xero.com/api.xro/2.0/Invoices",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create one or more sales invoices or purchase bills"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
