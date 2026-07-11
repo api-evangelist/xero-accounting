@@ -1,0 +1,48 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/xero-accounting-openapi.yml
+schemes:
+- name: OAuth2
+  source: openapi/xero-accounting-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://login.xero.com/identity/connect/authorize
+    tokenUrl: https://identity.xero.com/connect/token
+scopes:
+- scope: accounting.attachments
+  description: Grant read/write access to attachments
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/xero-accounting-openapi.yml
+- scope: accounting.contacts
+  description: Grant read/write access to contacts and contact groups
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/xero-accounting-openapi.yml
+- scope: accounting.journals.read
+  description: Grant read-only access to journals
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/xero-accounting-openapi.yml
+- scope: accounting.reports.read
+  description: Grant read-only access to accounting reports
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/xero-accounting-openapi.yml
+- scope: accounting.settings
+  description: Grant read/write access to organisation and account settings
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/xero-accounting-openapi.yml
+- scope: accounting.transactions
+  description: Grant read/write access to bank transactions, credit notes, invoices, repeating
+    invoices
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/xero-accounting-openapi.yml

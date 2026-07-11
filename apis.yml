@@ -58,6 +58,12 @@ apis:
         url: https://developer.xero.com/documentation/guides/oauth2/auth-flow
 
 common:
+  - type: Authentication
+    url: authentication/xero-accounting-authentication.yml
+  - type: OAuthScopes
+    url: scopes/xero-accounting-scopes.yml
+  - url: https://blog.xero.com/feed/
+    type: Blog
   - type: LinkedIn
     url: https://www.linkedin.com/company/xero
   - type: Website
