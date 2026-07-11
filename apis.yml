@@ -58,6 +58,8 @@ apis:
         url: https://developer.xero.com/documentation/guides/oauth2/auth-flow
 
 common:
+  - type: DomainSecurity
+    url: security/xero-accounting-domain-security.yml
   - type: Authentication
     url: authentication/xero-accounting-authentication.yml
   - type: OAuthScopes
