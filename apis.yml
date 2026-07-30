@@ -9,7 +9,19 @@ description: >-
   OAuth 2.0 authorization layer, require the Xero-Tenant-Id header to scope
   requests to an organization, and are served from api.xero.com.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/xero-accounting.png
 tags:
   - Accounting
   - Small Business
@@ -23,40 +35,102 @@ created: '2026-05-11'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: xero-accounting:api
-    name: Xero Accounting API
-    description: >-
-      REST API for managing invoices, contacts, bank transactions, accounts,
-      items, journals, reports, and other accounting resources in a Xero
-      organization. Uses OAuth 2.0 with the Xero-Tenant-Id header to scope
-      requests to a tenant.
-    humanURL: https://developer.xero.com/documentation/api/accounting/overview
-    baseURL: https://api.xero.com/api.xro/2.0
-    tags:
-      - Accounting
-      - Invoicing
-      - Bookkeeping
-    properties:
-      - type: Documentation
-        url: https://developer.xero.com/documentation/api/accounting/overview
-      - type: OAuth 2.0 Guide
-        url: https://developer.xero.com/documentation/guides/oauth2/overview
-      - type: OpenAPI
-        url: https://github.com/XeroAPI/Xero-OpenAPI
-  - aid: xero-accounting:connections
-    name: Xero Connections API
-    description: >-
-      OAuth 2.0 connections endpoint for listing the Xero tenants authorized
-      under an access token.
-    humanURL: https://developer.xero.com/documentation/guides/oauth2/auth-flow
-    baseURL: https://api.xero.com/connections
-    tags:
-      - OAuth
-      - Tenants
-    properties:
-      - type: Documentation
-        url: https://developer.xero.com/documentation/guides/oauth2/auth-flow
-
+- aid: xero-accounting:connections
+  name: Xero Connections API
+  description: >-
+    OAuth 2.0 connections endpoint for listing the Xero tenants authorized under an access token.
+  humanURL: https://developer.xero.com/documentation/guides/oauth2/auth-flow
+  baseURL: https://api.xero.com/connections
+  tags:
+  - OAuth
+  - Tenants
+  properties:
+  - type: Documentation
+    url: https://developer.xero.com/documentation/guides/oauth2/auth-flow
+- aid: xero-accounting:xero-accounting-accounts-api
+  name: Xero Accounting Accounts API
+  description: The Accounts API from Xero Accounting — 3 operation(s) for accounts.
+  humanURL: https://developer.xero.com/documentation/api/accounting/overview
+  baseURL: https://api.xero.com/api.xro/2.0
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/xero-accounting-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.xero.com/documentation/api/accounting/overview
+  - type: OAuth 2.0 Guide
+    url: https://developer.xero.com/documentation/guides/oauth2/overview
+- aid: xero-accounting:xero-accounting-banktransactions-api
+  name: Xero Accounting BankTransactions API
+  description: The BankTransactions API from Xero Accounting — 2 operation(s) for banktransactions.
+  humanURL: https://developer.xero.com/documentation/api/accounting/overview
+  baseURL: https://api.xero.com/api.xro/2.0
+  tags:
+  - BankTransactions
+  properties:
+  - type: OpenAPI
+    url: openapi/xero-accounting-banktransactions-api-openapi.yml
+  - type: Documentation
+    url: https://developer.xero.com/documentation/api/accounting/overview
+  - type: OAuth 2.0 Guide
+    url: https://developer.xero.com/documentation/guides/oauth2/overview
+- aid: xero-accounting:xero-accounting-banktransfers-api
+  name: Xero Accounting BankTransfers API
+  description: The BankTransfers API from Xero Accounting — 1 operation(s) for banktransfers.
+  humanURL: https://developer.xero.com/documentation/api/accounting/overview
+  baseURL: https://api.xero.com/api.xro/2.0
+  tags:
+  - BankTransfers
+  properties:
+  - type: OpenAPI
+    url: openapi/xero-accounting-banktransfers-api-openapi.yml
+  - type: Documentation
+    url: https://developer.xero.com/documentation/api/accounting/overview
+  - type: OAuth 2.0 Guide
+    url: https://developer.xero.com/documentation/guides/oauth2/overview
+- aid: xero-accounting:xero-accounting-batchpayments-api
+  name: Xero Accounting BatchPayments API
+  description: The BatchPayments API from Xero Accounting — 1 operation(s) for batchpayments.
+  humanURL: https://developer.xero.com/documentation/api/accounting/overview
+  baseURL: https://api.xero.com/api.xro/2.0
+  tags:
+  - BatchPayments
+  properties:
+  - type: OpenAPI
+    url: openapi/xero-accounting-batchpayments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.xero.com/documentation/api/accounting/overview
+  - type: OAuth 2.0 Guide
+    url: https://developer.xero.com/documentation/guides/oauth2/overview
+- aid: xero-accounting:xero-accounting-contacts-api
+  name: Xero Accounting Contacts API
+  description: The Contacts API from Xero Accounting — 1 operation(s) for contacts.
+  humanURL: https://developer.xero.com/documentation/api/accounting/overview
+  baseURL: https://api.xero.com/api.xro/2.0
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/xero-accounting-contacts-api-openapi.yml
+  - type: Documentation
+    url: https://developer.xero.com/documentation/api/accounting/overview
+  - type: OAuth 2.0 Guide
+    url: https://developer.xero.com/documentation/guides/oauth2/overview
+- aid: xero-accounting:xero-accounting-invoices-api
+  name: Xero Accounting Invoices API
+  description: The Invoices API from Xero Accounting — 1 operation(s) for invoices.
+  humanURL: https://developer.xero.com/documentation/api/accounting/overview
+  baseURL: https://api.xero.com/api.xro/2.0
+  tags:
+  - Invoices
+  properties:
+  - type: OpenAPI
+    url: openapi/xero-accounting-invoices-api-openapi.yml
+  - type: Documentation
+    url: https://developer.xero.com/documentation/api/accounting/overview
+  - type: OAuth 2.0 Guide
+    url: https://developer.xero.com/documentation/guides/oauth2/overview
 common:
   - type: AgenticAccess
     url: agentic-access/xero-accounting-agentic-access.yml
