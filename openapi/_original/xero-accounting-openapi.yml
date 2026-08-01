@@ -1,0 +1,241 @@
+openapi: 3.1.0
+info:
+  title: Xero Accounting API
+  version: "2.0"
+  description: |
+    REST API for managing invoices, contacts, bank transactions, accounts, items,
+    journals, reports, and other accounting resources in a Xero organization.
+    All requests require an OAuth 2.0 bearer token and the Xero-Tenant-Id header
+    to scope requests to a specific organization. Endpoints derived from the
+    official XeroAPI/Xero-OpenAPI repository.
+  contact:
+    name: Xero Developer
+    url: https://developer.xero.com/documentation/api/accounting/overview
+servers:
+  - url: https://api.xero.com/api.xro/2.0
+    description: Xero Accounting API production server
+security:
+  - OAuth2: [accounting.transactions, accounting.settings, accounting.contacts, accounting.attachments, accounting.reports.read, accounting.journals.read]
+tags:
+  - name: Accounts
+  - name: BankTransactions
+  - name: BankTransfers
+  - name: BatchPayments
+  - name: Contacts
+  - name: Invoices
+paths:
+  /Accounts:
+    get:
+      tags: [Accounts]
+      summary: Retrieve the chart of accounts
+      operationId: getAccounts
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Successful response
+    put:
+      tags: [Accounts]
+      summary: Create a new chart of accounts entry
+      operationId: createAccount
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Created account
+  /Accounts/{AccountID}:
+    get:
+      tags: [Accounts]
+      summary: Retrieve a single chart of accounts entry
+      operationId: getAccount
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+        - name: AccountID
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Account
+    post:
+      tags: [Accounts]
+      summary: Update a chart of accounts entry
+      operationId: updateAccount
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+        - name: AccountID
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Updated account
+    delete:
+      tags: [Accounts]
+      summary: Delete a chart of accounts entry
+      operationId: deleteAccount
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+        - name: AccountID
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Deleted account
+  /Accounts/{AccountID}/Attachments:
+    get:
+      tags: [Accounts]
+      summary: Retrieve attachments for an account
+      operationId: getAccountAttachments
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+        - name: AccountID
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Attachments
+  /BankTransactions:
+    get:
+      tags: [BankTransactions]
+      summary: Retrieve any spent or received money transactions
+      operationId: getBankTransactions
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Bank transactions
+    put:
+      tags: [BankTransactions]
+      summary: Create one or more spent or received money transactions
+      operationId: createBankTransactions
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Created bank transactions
+  /BankTransactions/{BankTransactionID}:
+    get:
+      tags: [BankTransactions]
+      summary: Retrieve a single spent or received money transaction
+      operationId: getBankTransaction
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+        - name: BankTransactionID
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Bank transaction
+  /BankTransfers:
+    get:
+      tags: [BankTransfers]
+      summary: Retrieve all bank transfers
+      operationId: getBankTransfers
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Bank transfers
+    put:
+      tags: [BankTransfers]
+      summary: Create a bank transfer
+      operationId: createBankTransfer
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Created bank transfer
+  /BatchPayments:
+    get:
+      tags: [BatchPayments]
+      summary: Retrieve either one or many batch payments for invoices
+      operationId: getBatchPayments
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Batch payments
+    put:
+      tags: [BatchPayments]
+      summary: Create a batch payment for invoices
+      operationId: createBatchPayment
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Created batch payment
+  /Contacts:
+    get:
+      tags: [Contacts]
+      summary: Retrieve all contacts in a Xero organisation
+      operationId: getContacts
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Contacts
+    put:
+      tags: [Contacts]
+      summary: Create multiple contacts (bulk)
+      operationId: createContacts
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Created contacts
+  /Invoices:
+    get:
+      tags: [Invoices]
+      summary: Retrieve sales invoices or purchase bills
+      operationId: getInvoices
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Invoices
+    put:
+      tags: [Invoices]
+      summary: Create one or more sales invoices or purchase bills
+      operationId: createInvoices
+      parameters:
+        - $ref: '#/components/parameters/XeroTenantId'
+      responses:
+        '200':
+          description: Created invoices
+components:
+  parameters:
+    XeroTenantId:
+      name: Xero-Tenant-Id
+      in: header
+      required: true
+      description: Xero identifier for the tenant (organisation) the request applies to
+      schema:
+        type: string
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.xero.com/identity/connect/authorize
+          tokenUrl: https://identity.xero.com/connect/token
+          scopes:
+            accounting.transactions: Grant read/write access to bank transactions, credit notes, invoices, repeating invoices
+            accounting.settings: Grant read/write access to organisation and account settings
+            accounting.contacts: Grant read/write access to contacts and contact groups
+            accounting.attachments: Grant read/write access to attachments
+            accounting.reports.read: Grant read-only access to accounting reports
+            accounting.journals.read: Grant read-only access to journals

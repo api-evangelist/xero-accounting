@@ -1,0 +1,24 @@
+{
+  "provider": "xero-accounting",
+  "sources": [
+    "xero-accounting-accounts-api-openapi.yml",
+    "xero-accounting-banktransactions-api-openapi.yml",
+    "xero-accounting-banktransfers-api-openapi.yml",
+    "xero-accounting-batchpayments-api-openapi.yml",
+    "xero-accounting-contacts-api-openapi.yml",
+    "xero-accounting-invoices-api-openapi.yml"
+  ],
+  "outputs": [
+    "xero-accounting-accounts-api-openapi.yml",
+    "xero-accounting-banktransactions-api-openapi.yml",
+    "xero-accounting-banktransfers-api-openapi.yml",
+    "xero-accounting-batchpayments-api-openapi.yml",
+    "xero-accounting-contacts-api-openapi.yml",
+    "xero-accounting-invoices-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
