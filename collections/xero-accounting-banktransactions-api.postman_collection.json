@@ -1,0 +1,308 @@
+{
+  "item": [
+    {
+      "id": "d0760cf5-fb6f-4c83-bd05-e83ed92155f8",
+      "name": "BankTransactions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "129a3dd4-6fb8-4942-9a52-25dbaf56fef9",
+          "name": "Retrieve any spent or received money transactions",
+          "request": {
+            "name": "Retrieve any spent or received money transactions",
+            "description": {},
+            "url": {
+              "path": [
+                "BankTransactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                "key": "Xero-Tenant-Id",
+                "value": "<string>"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f8f9328f-c9d9-4135-a939-9fe321bfb5d6",
+              "name": "Bank transactions",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "BankTransactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                    "key": "Xero-Tenant-Id",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d39206b1-d08a-4b9e-8b73-2f42eb253eb0",
+          "name": "Create one or more spent or received money transactions",
+          "request": {
+            "name": "Create one or more spent or received money transactions",
+            "description": {},
+            "url": {
+              "path": [
+                "BankTransactions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                "key": "Xero-Tenant-Id",
+                "value": "<string>"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "542695c3-bfc2-4670-8fcc-d3cf178fbcf7",
+              "name": "Created bank transactions",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "BankTransactions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                    "key": "Xero-Tenant-Id",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "16aad127-d4df-4b7a-bab0-0adb00544177",
+          "name": "Retrieve a single spent or received money transaction",
+          "request": {
+            "name": "Retrieve a single spent or received money transaction",
+            "description": {},
+            "url": {
+              "path": [
+                "BankTransactions",
+                ":BankTransactionID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<uuid>",
+                  "key": "BankTransactionID",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                "key": "Xero-Tenant-Id",
+                "value": "<string>"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "96cd2c83-46b6-4577-9d21-9caa9f69ecdb",
+              "name": "Bank transaction",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "BankTransactions",
+                    ":BankTransactionID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<uuid>",
+                      "key": "BankTransactionID",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                    "key": "Xero-Tenant-Id",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.xero.com/api.xro/2.0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "accounting.transactions accounting.settings accounting.contacts accounting.attachments accounting.reports.read accounting.journals.read"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://identity.xero.com/connect/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.xero.com/identity/connect/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "caf4db4b-b59b-4429-9a97-e3fddb7bc2bb",
+    "name": "Xero Accounting Accounts BankTransactions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for managing invoices, contacts, bank transactions, accounts, items,\njournals, reports, and other accounting resources in a Xero organization.\nAll requests require an OAuth 2.0 bearer token and the Xero-Tenant-Id header\nto scope requests to a specific organization. Endpoints derived from the\nofficial XeroAPI/Xero-OpenAPI repository.\n\n\nContact Support:\n Name: Xero Developer",
+      "type": "text/plain"
+    }
+  }
+}

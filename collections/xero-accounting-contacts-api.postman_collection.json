@@ -1,0 +1,211 @@
+{
+  "item": [
+    {
+      "id": "2e48c4b8-4853-44e5-9a67-f232b27e70b6",
+      "name": "Contacts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "08e4b44b-2d6e-4fab-8ae4-7afe8bb8e549",
+          "name": "Retrieve all contacts in a Xero organisation",
+          "request": {
+            "name": "Retrieve all contacts in a Xero organisation",
+            "description": {},
+            "url": {
+              "path": [
+                "Contacts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                "key": "Xero-Tenant-Id",
+                "value": "<string>"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7012085e-dcb2-4f59-b89e-ce649aefcbc5",
+              "name": "Contacts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Contacts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                    "key": "Xero-Tenant-Id",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "abd3f4a7-02be-40e7-9c17-bc7c4c625c29",
+          "name": "Create multiple contacts (bulk)",
+          "request": {
+            "name": "Create multiple contacts (bulk)",
+            "description": {},
+            "url": {
+              "path": [
+                "Contacts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                "key": "Xero-Tenant-Id",
+                "value": "<string>"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "43b82fbc-984e-4d28-9a55-4a14d4755402",
+              "name": "Created contacts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "Contacts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                    "key": "Xero-Tenant-Id",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.xero.com/api.xro/2.0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "accounting.transactions accounting.settings accounting.contacts accounting.attachments accounting.reports.read accounting.journals.read"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://identity.xero.com/connect/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.xero.com/identity/connect/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5da5f3ad-376f-4fc1-8679-077f4f4e5021",
+    "name": "Xero Accounting Accounts Contacts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for managing invoices, contacts, bank transactions, accounts, items,\njournals, reports, and other accounting resources in a Xero organization.\nAll requests require an OAuth 2.0 bearer token and the Xero-Tenant-Id header\nto scope requests to a specific organization. Endpoints derived from the\nofficial XeroAPI/Xero-OpenAPI repository.\n\n\nContact Support:\n Name: Xero Developer",
+      "type": "text/plain"
+    }
+  }
+}

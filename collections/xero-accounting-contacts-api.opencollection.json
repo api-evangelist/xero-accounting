@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Xero Accounting Accounts Contacts API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://login.xero.com/identity/connect/authorize",
+      "accessTokenUrl": "https://identity.xero.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Contacts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve all contacts in a Xero organisation",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/Contacts",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Retrieve all contacts in a Xero organisation"
+        },
+        {
+          "info": {
+            "name": "Create multiple contacts (bulk)",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.xero.com/api.xro/2.0/Contacts",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create multiple contacts (bulk)"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

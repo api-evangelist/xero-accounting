@@ -1,0 +1,211 @@
+{
+  "item": [
+    {
+      "id": "a8b06d21-c15e-44f3-9809-256038e7fd97",
+      "name": "BatchPayments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "792fccb5-a616-40d4-b033-619f0a60a123",
+          "name": "Retrieve either one or many batch payments for invoices",
+          "request": {
+            "name": "Retrieve either one or many batch payments for invoices",
+            "description": {},
+            "url": {
+              "path": [
+                "BatchPayments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                "key": "Xero-Tenant-Id",
+                "value": "<string>"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9f5bf5f5-6b72-4cc6-8e72-29e972373367",
+              "name": "Batch payments",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "BatchPayments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                    "key": "Xero-Tenant-Id",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "74e9d264-b5ae-4ed7-b3e5-f576c4388486",
+          "name": "Create a batch payment for invoices",
+          "request": {
+            "name": "Create a batch payment for invoices",
+            "description": {},
+            "url": {
+              "path": [
+                "BatchPayments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                "key": "Xero-Tenant-Id",
+                "value": "<string>"
+              }
+            ],
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b1c10051-8d6e-433a-83b4-c989b40a9ab9",
+              "name": "Created batch payment",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "BatchPayments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Xero identifier for the tenant (organisation) the request applies to",
+                    "key": "Xero-Tenant-Id",
+                    "value": "<string>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.xero.com/api.xro/2.0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "accounting.transactions accounting.settings accounting.contacts accounting.attachments accounting.reports.read accounting.journals.read"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://identity.xero.com/connect/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://login.xero.com/identity/connect/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b08962f2-47d8-4dab-bbd7-c36d7c61d156",
+    "name": "Xero Accounting Accounts BatchPayments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for managing invoices, contacts, bank transactions, accounts, items,\njournals, reports, and other accounting resources in a Xero organization.\nAll requests require an OAuth 2.0 bearer token and the Xero-Tenant-Id header\nto scope requests to a specific organization. Endpoints derived from the\nofficial XeroAPI/Xero-OpenAPI repository.\n\n\nContact Support:\n Name: Xero Developer",
+      "type": "text/plain"
+    }
+  }
+}

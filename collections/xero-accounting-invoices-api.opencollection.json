@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Xero Accounting Accounts Invoices API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://login.xero.com/identity/connect/authorize",
+      "accessTokenUrl": "https://identity.xero.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Invoices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve sales invoices or purchase bills",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/Invoices",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Retrieve sales invoices or purchase bills"
+        },
+        {
+          "info": {
+            "name": "Create one or more sales invoices or purchase bills",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.xero.com/api.xro/2.0/Invoices",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create one or more sales invoices or purchase bills"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

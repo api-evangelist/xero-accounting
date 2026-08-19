@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Xero Accounting Accounts BankTransactions API",
+    "version": "2.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://login.xero.com/identity/connect/authorize",
+      "accessTokenUrl": "https://identity.xero.com/connect/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "BankTransactions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve any spent or received money transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/BankTransactions",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Retrieve any spent or received money transactions"
+        },
+        {
+          "info": {
+            "name": "Create one or more spent or received money transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.xero.com/api.xro/2.0/BankTransactions",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Create one or more spent or received money transactions"
+        },
+        {
+          "info": {
+            "name": "Retrieve a single spent or received money transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.xero.com/api.xro/2.0/BankTransactions/:BankTransactionID",
+            "headers": [
+              {
+                "name": "Xero-Tenant-Id",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "BankTransactionID",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a single spent or received money transaction"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
