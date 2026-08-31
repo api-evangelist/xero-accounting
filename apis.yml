@@ -107,7 +107,7 @@ apis:
   humanURL: https://developer.xero.com/documentation/api/accounting/overview
   baseURL: https://api.xero.com/api.xro/2.0
   tags:
-  - Bank Transfers
+  - BankTransfers
   tags_raw:
   - BankTransfers
   properties:
@@ -123,7 +123,7 @@ apis:
   humanURL: https://developer.xero.com/documentation/api/accounting/overview
   baseURL: https://api.xero.com/api.xro/2.0
   tags:
-  - Batch Payments
+  - BatchPayments
   tags_raw:
   - BatchPayments
   properties:
