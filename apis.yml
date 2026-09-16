@@ -85,38 +85,6 @@ apis:
     url: https://developer.xero.com/documentation/api/accounting/overview
   - type: OAuth 2.0 Guide
     url: https://developer.xero.com/documentation/guides/oauth2/overview
-- aid: xero-accounting:xero-accounting-banktransactions-api
-  name: Xero Accounting BankTransactions API
-  description: The BankTransactions API from Xero Accounting — 2 operation(s) for banktransactions.
-  humanURL: https://developer.xero.com/documentation/api/accounting/overview
-  baseURL: https://api.xero.com/api.xro/2.0
-  tags:
-  - Bank Transactions
-  tags_raw:
-  - BankTransactions
-  properties:
-  - type: OpenAPI
-    url: openapi/xero-accounting-banktransactions-api-openapi.yml
-  - type: Documentation
-    url: https://developer.xero.com/documentation/api/accounting/overview
-  - type: OAuth 2.0 Guide
-    url: https://developer.xero.com/documentation/guides/oauth2/overview
-- aid: xero-accounting:xero-accounting-banktransfers-api
-  name: Xero Accounting BankTransfers API
-  description: The BankTransfers API from Xero Accounting — 1 operation(s) for banktransfers.
-  humanURL: https://developer.xero.com/documentation/api/accounting/overview
-  baseURL: https://api.xero.com/api.xro/2.0
-  tags:
-  - Bank Transfers
-  tags_raw:
-  - BankTransfers
-  properties:
-  - type: OpenAPI
-    url: openapi/xero-accounting-banktransfers-api-openapi.yml
-  - type: Documentation
-    url: https://developer.xero.com/documentation/api/accounting/overview
-  - type: OAuth 2.0 Guide
-    url: https://developer.xero.com/documentation/guides/oauth2/overview
 - aid: xero-accounting:xero-accounting-batchpayments-api
   name: Xero Accounting BatchPayments API
   description: The BatchPayments API from Xero Accounting — 1 operation(s) for batchpayments.
@@ -157,6 +125,34 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/xero-accounting-invoices-api-openapi.yml
+  - type: Documentation
+    url: https://developer.xero.com/documentation/api/accounting/overview
+  - type: OAuth 2.0 Guide
+    url: https://developer.xero.com/documentation/guides/oauth2/overview
+- aid: xero-accounting:xero-accounting-bank-transactions-api
+  name: Xero Accounting Bank Transactions API
+  description: The Bank Transactions API from Xero Accounting — 2 operation(s) for bank transactions.
+  humanURL: https://developer.xero.com/documentation/guides/oauth2/auth-flow
+  baseURL: https://api.xero.com/connections
+  tags:
+  - Bank Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/xero-accounting-bank-transactions-api-openapi.yml
+  - type: Documentation
+    url: https://developer.xero.com/documentation/api/accounting/overview
+  - type: OAuth 2.0 Guide
+    url: https://developer.xero.com/documentation/guides/oauth2/overview
+- aid: xero-accounting:xero-accounting-bank-transfers-api
+  name: Xero Accounting Bank Transfers API
+  description: The Bank Transfers API from Xero Accounting — 1 operation(s) for bank transfers.
+  humanURL: https://developer.xero.com/documentation/guides/oauth2/auth-flow
+  baseURL: https://api.xero.com/connections
+  tags:
+  - Bank Transfers
+  properties:
+  - type: OpenAPI
+    url: openapi/xero-accounting-bank-transfers-api-openapi.yml
   - type: Documentation
     url: https://developer.xero.com/documentation/api/accounting/overview
   - type: OAuth 2.0 Guide
