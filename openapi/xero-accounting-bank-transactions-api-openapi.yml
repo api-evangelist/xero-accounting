@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Xero Accounting Accounts BankTransactions API
+  title: Xero Accounting Bank Transactions API
   version: '2.0'
   description: 'REST API for managing invoices, contacts, bank transactions, accounts, items,
 
@@ -10,9 +10,7 @@ info:
 
     to scope requests to a specific organization. Endpoints derived from the
 
-    official XeroAPI/Xero-OpenAPI repository.
-
-    '
+    official XeroAPI/Xero-OpenAPI repository.'
   contact:
     name: Xero Developer
     url: https://developer.xero.com/documentation/api/accounting/overview
@@ -28,12 +26,12 @@ security:
   - accounting.reports.read
   - accounting.journals.read
 tags:
-- name: BankTransactions
+- name: Bank Transactions
 paths:
   /BankTransactions:
     get:
       tags:
-      - BankTransactions
+      - Bank Transactions
       summary: Retrieve any spent or received money transactions
       operationId: getBankTransactions
       parameters:
@@ -43,7 +41,7 @@ paths:
           description: Bank transactions
     put:
       tags:
-      - BankTransactions
+      - Bank Transactions
       summary: Create one or more spent or received money transactions
       operationId: createBankTransactions
       parameters:
@@ -54,7 +52,7 @@ paths:
   /BankTransactions/{BankTransactionID}:
     get:
       tags:
-      - BankTransactions
+      - Bank Transactions
       summary: Retrieve a single spent or received money transaction
       operationId: getBankTransaction
       parameters:

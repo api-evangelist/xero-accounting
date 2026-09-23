@@ -1,0 +1,27 @@
+# Front Door AI Index — xero-accounting — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: xero-accounting
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.xero.com
+  final_host: www.xero.com
+  ownership: shared
+  owner: xero
+  shares_host_with:
+  - xero
+  inherited_from: null
+  verdict: scored
+  score: null
+  host_score: 6
+  density: null
+  words: 1148
+  tiers:
+    agentic: 0
+    core: 6
+    model: 0
+  ambiguous: 4
+  top_terms:
+    AI: 6
+    smart: 4
